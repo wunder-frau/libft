@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 09:59:00 by istasheu          #+#    #+#             */
-/*   Updated: 2023/10/28 13:14:31 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/10/28 13:44:17 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
 	if (!d && !s)
-		return NULL;
+		return (NULL);
 	while (n--)
 		*d++ = *s++;
 	return (dst);
