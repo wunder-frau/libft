@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 16:06:07 by istasheu          #+#    #+#             */
-/*   Updated: 2023/10/30 15:57:07 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/10/30 17:15:05 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
-int		ft_toupper(int	c);
-int		ft_tolower(int	c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 #endif
