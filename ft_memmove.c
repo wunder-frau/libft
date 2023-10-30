@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 12:20:04 by istasheu          #+#    #+#             */
-/*   Updated: 2023/10/29 14:38:33 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/10/30 10:45:28 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,13 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char s[11] = "hellothere";
 	char f[5] = "what";
 
-	char s[22]= "o";
+	char s[22]= "oooo";
 	char f[5] = "what";
 
-	char *g = ft_memmove(s, f, 2);
+	char *g; 
+	ft_memmove(s, f, 2);
 	printf("%s\n", g);
-	memmove(s, f, 2);
+	g = memmove(s, f, 2);
 	printf("%s\n", g);
 	return (0);
 }*/
