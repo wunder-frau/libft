@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:27:44 by istasheu          #+#    #+#             */
-/*   Updated: 2023/10/30 18:29:57 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/10/31 16:18:22 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s || c == '\0')
+	while (*s || (unsigned char)c == '\0')
 	{
-		if (*s == c)
+		if (*s == (unsigned char)c)
 		{
 			return ((char *)s);
 		}

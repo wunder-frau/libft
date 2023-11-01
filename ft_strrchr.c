@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 08:16:16 by istasheu          #+#    #+#             */
-/*   Updated: 2023/10/31 09:58:31 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/10/31 16:25:23 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strrchr(const char *s, int c)
 	char	*end;
 
 	end = (char *)s + ft_strlen(s);
-	while (*end != c)
+	while (*end != (unsigned char)c)
 	{
 		if (end == s)
 		{

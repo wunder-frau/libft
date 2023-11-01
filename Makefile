@@ -15,7 +15,8 @@ SRCS =	ft_isalpha.c \
 	ft_strchr.c \
 	ft_strrchr.c \
 	ft_memchr.c \
-	ft_memcmp.c
+	ft_memcmp.c \
+	ft_strnstr.c
 
 OBJ = $(SRCS:.c=.o)
 NAME = libft.a
