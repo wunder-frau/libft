@@ -19,7 +19,8 @@ SRCS =	ft_isalpha.c \
 	ft_strnstr.c \
 	ft_strdup.c \
 	ft_calloc.c	\
-	ft_atoi.c
+	ft_atoi.c \
+	ft_strlcat.c
 
 OBJ = $(SRCS:.c=.o)
 NAME = libft.a
