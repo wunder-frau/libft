@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 08:41:52 by istasheu          #+#    #+#             */
-/*   Updated: 2023/11/02 09:01:34 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/11/02 12:19:08 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int	is_negative;
-	int	number;
-	int	i;
+	int				i;
+	int				is_negative;
+	long long int	number;
 
 	i = 0;
 	is_negative = 0;
