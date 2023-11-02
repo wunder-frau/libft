@@ -22,7 +22,11 @@ SRCS =	ft_isalpha.c \
 	ft_atoi.c \
 	ft_strlcat.c \
 	ft_substr.c	\
-	ft_strjoin.c
+	ft_strjoin.c \
+	ft_putchar_fd.c \
+	ft_putstr_fd.c \
+	ft_putendl_fd.c \
+	ft_putnbr_fd.c
 
 OBJ = $(SRCS:.c=.o)
 NAME = libft.a
