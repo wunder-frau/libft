@@ -1,13 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/02 10:25:36 by istasheu          #+#    #+#             */
+/*   Updated: 2023/11/02 11:54:20 by istasheu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t i;
-	size_t j;
-	char	*str;
+	size_t	i;
+	size_t	j;
+	char	*substr;
 
-	str = (char*)malloc(sizeof(*s) * (len + 1));
-	if (!str)
+	if (!s)
+		return (NULL);
+	substr = (char *)malloc(sizeof(*s) * (len + 1));
+	if (!substr)
 		return (NULL);
 	i = 0;
 	j = 0;
@@ -15,13 +29,13 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	{
 		if (i >= start && j < len)
 		{
-			str[j] = s[i];
+			substr[j] = s[i];
 			j++;
 		}
 		i++;
 	}
-	str[j] = 0;
-	return (str);
+	substr[j] = '\0';
+	return (substr);
 }
 /*int main() {
     const char *inputString = "This is a sample string for testing.";
