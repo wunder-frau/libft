@@ -1,8 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/06 09:16:36 by istasheu          #+#    #+#             */
+/*   Updated: 2023/11/06 09:23:15 by istasheu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static	int	ft_len(long nb)
 {
-	int	len = 0;
+	int	len;
+
+	len = 0;
 	if (nb < 0)
 	{
 		nb *= -1;
@@ -13,7 +27,7 @@ static	int	ft_len(long nb)
 		nb /= 10;
 		len++;
 	}
-	return(len);
+	return (len);
 }
 
 static char	*ft_int_to_char(char *str, int n, long int len)
@@ -39,21 +53,22 @@ static int	ft_invert(char *str, int n)
 
 char	*ft_itoa(int nb)
 {
-	char	*str;
+	char			*str;
 	long long int	n;
-	size_t	i;
+	size_t			i;
 
 	n = nb;
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	i = ft_len(n);
-	if(!(str = (char *)malloc(i + 1)))
-		return(0);
+	str = (char *)malloc(i + 1);
+	if (!str)
+		return (0);
 	str[i--] = '\0';
 	if (n == 0)
 	{
 		str[0] = 48;
-		return(str);
+		return (str);
 	}
 	str = ft_int_to_char(str, ft_invert(str, n), i);
 	return (str);
