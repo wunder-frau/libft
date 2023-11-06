@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/06 09:56:22 by istasheu          #+#    #+#             */
+/*   Updated: 2023/11/06 09:56:42 by istasheu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -14,8 +26,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	while (s1[first] && ft_strchr(set, s1[first]))
 		first++;
-	/*if (first > last)
-		return (ft_strdup(s1 + last + 1));*/
 	while (last > first && ft_strchr(set, s1[last - 1]))
 		last--;
 	trim = (char *)malloc(sizeof(*s1) * (last - first + 1));
