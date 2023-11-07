@@ -11,69 +11,46 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdbool.h>
 
-static	int	ft_len(long nb)
+static int	ft_count(int n)
 {
-	int	len;
+	int	digit;
 
-	len = 0;
-	if (nb < 0)
+	digit = !n;
+	while (n)
 	{
-		nb *= -1;
-		len = 1;
-	}
-	while (nb > 0)
-	{
-		nb /= 10;
-		len++;
-	}
-	return (len);
-}
-
-static char	*ft_int_to_char(char *str, int n, long int len)
-{
-	while (n > 0)
-	{
-		str[len] = 48 + (n % 10);
 		n /= 10;
-		len--;
+		digit++;
 	}
-	return (str);
+	return (digit);
 }
 
-static int	ft_invert(char *str, int n)
+char	*ft_itoa(int n)
 {
-	if (n < 0)
+	bool	sign;
+	char	*res;
+	size_t	count;
+
+	sign = n < 0;
+	count = ft_count(n) + sign;
+	res = (char *)malloc(sizeof(char) * (count + 1));
+	if (!res)
+		return (res);
+	res[count] = 0;
+	if (sign)
 	{
-		str[0] = '-';
-		n *= -1;
+		*res = '-';
+		res[--count] = -(n % 10) + 48;
+		n = -(n / 10);
 	}
-	return (n);
-}
-
-char	*ft_itoa(int nb)
-{
-	char			*str;
-	long long int	n;
-	size_t			i;
-
-	n = nb;
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	i = ft_len(n);
-	str = (char *)malloc(i + 1);
-	if (!str)
-		return (0);
-	str[i--] = '\0';
-	if (n == 0)
+	while (count-- - sign)
 	{
-		str[0] = 48;
-		return (str);
+		res[count] = n % 10 + 48;
+		n /= 10;
 	}
-	str = ft_int_to_char(str, ft_invert(str, n), i);
-	return (str);
+	return (res);
 }
-
 /*int	main(void)
 {
 	printf("%s\n", ft_itoa(0));
