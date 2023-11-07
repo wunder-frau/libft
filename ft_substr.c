@@ -15,39 +15,37 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	size_t	j;
+	size_t	len_s;
 	char	*substr;
 
 	if (!s)
 		return (NULL);
-	substr = (char *)malloc(sizeof(*s) * (len + 1));
+	len_s = ft_strlen(s);
+	if (start >= len_s)
+		return (ft_strdup(""));
+	if (len > len_s - start)
+		len = len_s - start;
+	substr = (char *)malloc(len + 1);
 	if (!substr)
 		return (NULL);
 	i = 0;
-	j = 0;
-	while (s[i])
+	while (i < len)
 	{
-		if (i >= start && j < len)
-		{
-			substr[j] = s[i];
-			j++;
-		}
+		substr[i] = s[start + i];
 		i++;
 	}
-	substr[j] = '\0';
+	substr[len] = '\0';
 	return (substr);
 }
 /*int main() {
     const char *inputString = "This is a sample string for testing.";
 
-    // Extract a substring starting at index 10 with a length of 6 characters
     char *substring = ft_substr(inputString, 10, 6);
 
     if (substring) {
         printf("Original String: %s\n", inputString);
         printf("Substring: %s\n", substring);
 
-        // Don't forget to free the dynamically allocated memory
         free(substring);
     } else {
         printf("Memory allocation failed.\n");
