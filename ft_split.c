@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 09:23:56 by istasheu          #+#    #+#             */
-/*   Updated: 2023/11/06 09:50:10 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/11/07 17:59:15 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static size_t	ft_countword(char const *s, char c)
 	count = 0;
 	while (*s)
 	{
-		while (*s == c)
+		while (*s == c && *s)
 			s++;
 		if (*s)
 			count++;
@@ -41,6 +41,20 @@ static unsigned int	ft_getstart(char const *s, char c)
 	while (s[start] && s[start] == c)
 		start++;
 	return (start);
+}
+
+static char	**ft_free(char **strs, int j)
+{
+	int	i;
+
+	i = 0;
+	while (i < j)
+	{
+		free(strs[i]);
+		i++;
+	}
+	free(strs);
+	return (NULL);
 }
 
 static unsigned int	ft_getend(char const *s, unsigned int start, char c)
@@ -66,7 +80,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	word_count = ft_countword(s, c);
-	words = (char **)malloc(sizeof(char *) * word_count);
+	words = malloc((word_count + 1) * sizeof(char *));
 	if (!words)
 		return (NULL);
 	i = 0;
@@ -74,18 +88,27 @@ char	**ft_split(char const *s, char c)
 	{
 		start = ft_getstart(s, c);
 		end = ft_getend(s, start, c);
-		words[i++] = ft_substr(s, start, end - start);
+		words[i] = ft_substr(s, start, end - start);
+		if (!words[i])
+			return (ft_free(words, i));
+		i++;
 		s += end;
 	}
+	words[i] = 0;
 	return (words);
 }
-
 /*int main() {
-    char input[] = "   This is a sample    sentence.     ";
-    char delimiter = ' ';
+    char input[] = "--1-2--3---4----5-----42";
+    char delimiter = '-';
 
     char** words = ft_split(input, delimiter);
-    printf("[%s]\n", words[0]); 
+	int i = 0;
+	while (words[i])
+	{
+    	printf("%s\n", words[i]); 
+		i++;
+	}
+    printf("%s\n", words[i]); 
     // size_t wordCount = ft_countword(input, delimiter);
     // printf("Number of words: %zu\n", wordCount);
 
