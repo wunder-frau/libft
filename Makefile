@@ -6,7 +6,7 @@
 #    By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/08 10:50:22 by istasheu          #+#    #+#              #
-#    Updated: 2023/11/08 12:36:23 by istasheu         ###   ########.fr        #
+#    Updated: 2023/11/08 14:53:47 by istasheu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,7 @@ SRCS =	ft_isalpha.c \
 	ft_striteri.c
 
 SRCS_BONUS = ft_lstnew.c \
+			 ft_lstadd_front.c
 
 OBJ = $(SRCS:.c=.o)
 OBJ_BONUS = $(OBJ) $(SRCS_BONUS:.c=.o)
