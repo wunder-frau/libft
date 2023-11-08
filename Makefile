@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/11/08 10:50:22 by istasheu          #+#    #+#              #
+#    Updated: 2023/11/08 12:36:23 by istasheu         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 SRCS =	ft_isalpha.c \
 	ft_isdigit.c \
 	ft_isalnum.c \
@@ -33,7 +45,10 @@ SRCS =	ft_isalpha.c \
 	ft_strmapi.c \
 	ft_striteri.c
 
+SRCS_BONUS = ft_lstnew.c \
+
 OBJ = $(SRCS:.c=.o)
+OBJ_BONUS = $(OBJ) $(SRCS_BONUS:.c=.o)
 NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -43,15 +58,18 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
+bonus: $(OBJ) $(OBJ_BONUS)
+	ar rcs $(NAME) $(OBJ) $(OBJ_BONUS)
+
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(OBJ_BONUS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
