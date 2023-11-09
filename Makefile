@@ -15,7 +15,7 @@ SRCS =	ft_isalpha.c \
 	ft_isalnum.c \
 	ft_isascii.c \
 	ft_isprint.c \
-	ft_strlen.c	\
+	ft_strlen.c \
 	ft_memset.c \
 	ft_bzero.c \
 	ft_memcpy.c \
@@ -30,7 +30,7 @@ SRCS =	ft_isalpha.c \
 	ft_memcmp.c \
 	ft_strnstr.c \
 	ft_strdup.c \
-	ft_calloc.c	\
+	ft_calloc.c \
 	ft_atoi.c \
 	ft_strlcat.c \
 	ft_substr.c	\
@@ -46,7 +46,13 @@ SRCS =	ft_isalpha.c \
 	ft_striteri.c
 
 SRCS_BONUS = ft_lstnew.c \
-			 ft_lstadd_front.c
+	     ft_lstadd_front.c \
+	     ft_lstsize.c \
+	     ft_lstlast.c \
+	     ft_lstadd_back.c\
+	     ft_lstdelone.c	\
+	     ft_lstclear.c \
+	     ft_lstiter.c
 
 OBJ = $(SRCS:.c=.o)
 OBJ_BONUS = $(OBJ) $(SRCS_BONUS:.c=.o)
