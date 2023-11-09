@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 14:15:40 by istasheu          #+#    #+#             */
-/*   Updated: 2023/11/08 15:24:54 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/11/09 16:58:47 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (lst && *lst)
+	if (lst || new)
 		new->next = *lst;
 	*lst = new;
 }
