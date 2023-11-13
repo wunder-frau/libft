@@ -4,7 +4,7 @@ void ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*temp;
 
-	temp = (t_list *)lst;
+	temp = lst;
 	if (temp && f)
 		while (temp)
 		{
