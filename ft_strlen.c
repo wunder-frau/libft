@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 16:16:28 by istasheu          #+#    #+#             */
-/*   Updated: 2023/10/26 08:37:32 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/11/14 15:21:57 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,3 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
-/*int main()
-{
-	char *k = "lalfd";
-	size_t l = ft_strlen(k);
-	printf("%zx", l);
-}*/

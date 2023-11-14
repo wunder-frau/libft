@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 08:16:16 by istasheu          #+#    #+#             */
-/*   Updated: 2023/10/31 16:25:23 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/11/14 16:18:28 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (end);
 }
-/*int main()
-{
-	char str[15] = "qwert3yuio3p";
-	char ch = '3';
-	char *func;
-
-	func = ft_strrchr(str, ch);
-	
-	printf("%s", func);
-	return (0);
-}*/

@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 09:56:22 by istasheu          #+#    #+#             */
-/*   Updated: 2023/11/06 09:56:42 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/11/14 16:53:38 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,25 +36,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	trim[i] = 0;
 	return (trim);
 }
-/*
-int main() {
-    //const char *input = "   Hello, world!&   ";
-   // const char *chars_to_trim = " \t &"; // Characters to trim: space and tab
-   //
- const char *input = "\t\t\t";
-const char *chars_to_trim = " \t";
-
-    char *trimmed_str = ft_strtrim(input, chars_to_trim);
-
-    if (trimmed_str == NULL) {
-        printf("Memory allocation error.\n");
-        return 1;
-    }
-
-    printf("Original String: \"%s\"\n", input);
-    printf("Trimmed String: \"%s\"\n", trimmed_str);
-
-    free(trimmed_str);
-
-    return 0;
-} */

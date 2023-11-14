@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 09:16:36 by istasheu          #+#    #+#             */
-/*   Updated: 2023/11/06 09:23:15 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/11/14 16:51:44 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,3 @@ char	*ft_itoa(int n)
 	}
 	return (res);
 }
-/*int	main(void)
-{
-	printf("%s\n", ft_itoa(0));
-	printf("%s\n", ft_itoa(+12345));
-	printf("%s\n", ft_itoa(-54321));
-}*/

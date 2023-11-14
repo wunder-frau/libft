@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 15:15:08 by istasheu          #+#    #+#             */
-/*   Updated: 2023/10/30 15:42:20 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/11/14 15:46:32 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,3 @@ int	ft_toupper(int c)
 	else
 		return (c);
 }
-/*int main()
-{
-	char k = 'b';
-	int h = ft_toupper(k);
-
-	printf("%d", h);
-
-	return (0);
-}*/

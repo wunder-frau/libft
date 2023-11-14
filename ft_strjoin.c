@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 12:37:23 by istasheu          #+#    #+#             */
-/*   Updated: 2023/11/02 12:41:28 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/11/14 16:34:36 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,21 +30,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	dst[i] = '\0';
 	return (dst);
 }
-/*int main() {
-    const char *string1 = "Hello, ";
-    const char *string2 = "World!";
-
-    // Call your custom ft_strjoin function
-    char *result = ft_strjoin(string1, string2);
-
-    if (result) {
-        printf("Concatenated String: %s\n", result);
-
-        // Don't forget to free the memory allocated by ft_strjoin
-        free(result);
-    } else {
-        printf("Memory allocation failed.\n");
-    }
-
-    return 0;
-}*/

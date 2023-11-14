@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 11:59:14 by istasheu          #+#    #+#             */
-/*   Updated: 2023/10/31 13:06:02 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/11/14 16:23:05 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/*int	main(void)
-{
-	char s[] = "aaa6";
-	char f[] = "aaaaa";
-    char g = 4;
-
-if (ft_memcmp(s, f, g) == 0){
-
-    printf("%s\n", "the same");
-} else {
-    printf("%s\n", "are different");
-}
-	return 0;
-}*/

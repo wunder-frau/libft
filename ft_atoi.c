@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 08:41:52 by istasheu          #+#    #+#             */
-/*   Updated: 2023/11/06 16:35:57 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/11/14 17:42:07 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,25 @@ int	ft_atoi(const char *str)
 	}
 	return (number * is_negative);
 }
-/*int main() {
-    char *s = " -1234ab567";
-    printf("%d\n", ft_atoi(s));
-    return 0;
-}*/
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <libc.h>
+int main(void)
+{
+    char *s = "-21474836481111111111111111111111111111111111";
+    char *str;
+
+    int i = 2;
+    while (i < 40)
+    {
+        str = malloc(i + 1);
+        memcpy(str, s, i);
+        str[i] = 0;
+        printf("%s\n", str);
+        printf("%i\n", atoi(str));
+        printf("%i\n\n", ft_atoi(str));
+        free(str);
+        i++;
+    }
+}

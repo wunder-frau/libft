@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 16:33:38 by istasheu          #+#    #+#             */
-/*   Updated: 2023/10/30 17:11:28 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/11/14 16:19:18 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (0);
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
-/*int	main(void)
-{
-	char s[] = "aaaaa";
-	char f[] = "aaaaa";
-    char g = 4;
-
-if (ft_strncmp(s, f, g) == 0){
-
-    printf("%s\n", "the same");
-} else {
-    printf("%s\n", "are different");
-}
-	return 0;
-}*/

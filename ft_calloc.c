@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 14:13:09 by istasheu          #+#    #+#             */
-/*   Updated: 2023/11/13 15:50:24 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/11/14 10:02:34 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	*ft_calloc(size_t count, size_t size)
 	void			*dest;
 	size_t			total;
 
-    total = -1;
+	total = -1;
 	if (count != 0 && total / count < size)
-        return (NULL);
+		return (NULL);
 	total = count * size;
 	dest = malloc(total);
 	if (dest == NULL)

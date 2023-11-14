@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/11/08 10:50:22 by istasheu          #+#    #+#              #
-#    Updated: 2023/11/08 14:53:47 by istasheu         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 SRCS =	ft_isalpha.c \
 	ft_isdigit.c \
 	ft_isalnum.c \
@@ -45,18 +33,18 @@ SRCS =	ft_isalpha.c \
 	ft_strmapi.c \
 	ft_striteri.c
 
-SRCS_BONUS = ft_lstnew.c \
-	ft_lstadd_front.c \
-	ft_lstsize.c \
-	ft_lstlast.c \
-	ft_lstadd_back.c\
-	ft_lstdelone.c	\
-	ft_lstclear.c \
-	ft_lstiter.c \
-	ft_lstmap.c
+SRCS_BONUS = ft_lstnew_bonus.c \
+	ft_lstadd_front_bonus.c \
+	ft_lstsize_bonus.c \
+	ft_lstlast_bonus.c \
+	ft_lstadd_back_bonus.c\
+	ft_lstdelone_bonus.c \
+	ft_lstclear_bonus.c \
+	ft_lstiter_bonus.c \
+	ft_lstmap_bonus.c
 
 OBJ = $(SRCS:.c=.o)
-OBJ_BONUS = $(OBJ) $(SRCS_BONUS:.c=.o)
+OBJ_BONUS = $(SRCS_BONUS:.c=.o)
 NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -64,19 +52,22 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+	@ar rcs $(NAME) $(OBJ)
 
-bonus: $(OBJ) $(OBJ_BONUS)
-	ar rcs $(NAME) $(OBJ) $(OBJ_BONUS)
+bonus: .bonus 
+	
+.bonus: $(OBJ) $(OBJ_BONUS)
+	@ar rcs $(NAME) $(OBJ) $(OBJ_BONUS)
+	@touch .bonus
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+	@$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 clean:
-	rm -f $(OBJ) $(OBJ_BONUS)
+	@rm -f $(OBJ) $(OBJ_BONUS) .bonus
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 

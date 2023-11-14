@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:54:34 by istasheu          #+#    #+#             */
-/*   Updated: 2023/11/01 10:25:22 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/11/14 16:26:28 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-/*int	main(void)
-{
-	char s[] = "aaaay";
-	char f[] = "aaaaa";
-    char g = 5;
-
-if (ft_strnstr(s, f, g) == 0){
-
-    printf("%s\n", "the same");
-} else {
-    printf("%s\n", "are different");
-}
-	return 0;
-}*/

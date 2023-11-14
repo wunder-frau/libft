@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 09:23:56 by istasheu          #+#    #+#             */
-/*   Updated: 2023/11/07 17:59:15 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/11/14 16:37:49 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,20 +97,3 @@ char	**ft_split(char const *s, char c)
 	words[i] = 0;
 	return (words);
 }
-/*int main() {
-    char input[] = "--1-2--3---4----5-----42";
-    char delimiter = '-';
-
-    char** words = ft_split(input, delimiter);
-	int i = 0;
-	while (words[i])
-	{
-    	printf("%s\n", words[i]); 
-		i++;
-	}
-    printf("%s\n", words[i]); 
-    // size_t wordCount = ft_countword(input, delimiter);
-    // printf("Number of words: %zu\n", wordCount);
-
-    return 0;
-}*/

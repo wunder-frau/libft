@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 13:05:44 by istasheu          #+#    #+#             */
-/*   Updated: 2023/11/02 13:17:02 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/11/14 16:47:04 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,3 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		ft_putchar_fd(l_nb + 48, fd);
 }
-/*int	main(void)
-{
-	int	n = 2147483647;
-	ft_putnbr_fd(n, fd);
-	return (0);
-}*/
