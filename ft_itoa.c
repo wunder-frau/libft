@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 09:16:36 by istasheu          #+#    #+#             */
-/*   Updated: 2023/11/14 16:51:44 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/11/15 15:56:35 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,10 @@ char	*ft_itoa(int n)
 	char	*res;
 	size_t	count;
 
-	sign = n < 0;
+	if (n < 0)
+		sign = 1;
+	else
+		sign = 0;
 	count = ft_count(n) + sign;
 	res = (char *)malloc(sizeof(char) * (count + 1));
 	if (!res)
