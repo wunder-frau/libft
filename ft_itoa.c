@@ -6,12 +6,11 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 09:16:36 by istasheu          #+#    #+#             */
-/*   Updated: 2023/11/15 15:56:35 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/11/16 10:47:42 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdbool.h>
 
 static int	ft_count(int n)
 {
