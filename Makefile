@@ -52,22 +52,23 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@ar rcs $(NAME) $(OBJ)
+	ar -rcs $(NAME) $(OBJ)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 bonus: .bonus 
 	
-.bonus: $(OBJ) $(OBJ_BONUS)
-	@ar rcs $(NAME) $(OBJ) $(OBJ_BONUS)
-	@touch .bonus
-
-%.o: %.c
-	@$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+.bonus: $(OBJ_BONUS)
+	ar -rcs $(NAME) $(OBJ_BONUS)
+	@ touch .bonus
 
 clean:
-	@rm -f $(OBJ) $(OBJ_BONUS) .bonus
+	rm -rf $(OBJ) $(OBJ_BONUS)
+	@rm -rf .bonus
 
 fclean: clean
-	@rm -f $(NAME)
+	rm -rf $(NAME)
 
 re: fclean all
 
