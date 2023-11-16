@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 09:16:36 by istasheu          #+#    #+#             */
-/*   Updated: 2023/11/16 10:47:42 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/11/16 12:22:07 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	ft_count(int n)
 
 char	*ft_itoa(int n)
 {
-	bool	sign;
+	int		sign;
 	char	*res;
 	size_t	count;
 
