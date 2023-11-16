@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 10:25:46 by istasheu          #+#    #+#             */
-/*   Updated: 2023/11/14 10:27:32 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/11/16 10:26:21 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,12 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*temp;
-
-	temp = lst;
-	if (temp && f)
+	if (lst && f)
 	{
-		while (temp)
+		while (lst)
 		{
-			f(temp->content);
-			temp = temp->next;
+			f(lst->content);
+			lst = lst->next;
 		}
 	}
 }
