@@ -6,14 +6,13 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 16:06:07 by istasheu          #+#    #+#             */
-/*   Updated: 2023/11/14 12:21:59 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/11/16 10:41:51 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 
