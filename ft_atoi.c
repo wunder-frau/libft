@@ -6,11 +6,11 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 08:41:52 by istasheu          #+#    #+#             */
-/*   Updated: 2023/11/21 10:35:07 by istasheu         ###   ########.fr       */
+/*   Updated: 2023/11/21 10:41:17 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"?????
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
